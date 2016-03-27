@@ -1,5 +1,9 @@
 /* New Style */
 
+body {
+  overflow: hidden;
+}
+
 hr {
   border-color: lightgrey;
 }
@@ -8,6 +12,7 @@ hr {
   width: 100%;
   height: 100vh;
 }
+
 #pac-input {
   background-color: #fff;
   border-radius: 2px;
@@ -34,9 +39,9 @@ hr {
 }
 
 #saved-icon {
-  position: absolute;
+  /*position: absolute;
   top: 110px;
-  right: 10px;
+  right: 10px;*/
   height: 40px;
   width: 40px;
   opacity: 0.7;
@@ -48,9 +53,9 @@ hr {
 }
 
 #search-icon {
-  position: absolute;
+  /*position: absolute;
   top: 60px;
-  right: 10px;
+  right: 10px;*/
   height: 40px;
   width: 40px;
   padding: 5px;
@@ -64,9 +69,9 @@ hr {
 }
 
 #marker-icon {
-  position: absolute;
+  /*position: absolute;
   top: 10px;
-  right: 10px;
+  right: 10px;*/
   height: 40px;
   width: 40px;
   padding: 5px;
@@ -86,14 +91,15 @@ hr {
 #saved-div {
   padding: 10px;
   position: absolute;
-  display: none;
-  top: 10px;
-  right: 60px;
+  visibility: hidden;
+  opacity: 0;
+  top: -100px;
+  right: 45px;
   z-index: 100;
   min-height: 25vh;
   max-height: 80vh;
   width: 325px;
-  max-width: 100%;
+  /*max-width: 100%;*/
   background: rgba(255,255,255,.65);
   border-radius: 2px;
   border: 1px solid transparent;
@@ -105,13 +111,14 @@ hr {
 #search-div {
   padding: 10px;
   position: absolute;
-  display: none;
-  top: 10px;
-  right: 60px;
+  visibility: hidden;
+  opacity: 0;
+  top: -50px;
+  right: 45px;
   z-index: 100;
   min-height: 25vh;
   width: 325px;
-  max-width: 100%;
+  /*max-width: 100%;*/
   background: rgba(255,255,255,.65);
   border-radius: 2px;
   border: 1px solid transparent;
@@ -120,17 +127,47 @@ hr {
   transition: 0.3s;
 }
 
+#md {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+
+}
+#sh-d {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
+#sd-d {
+  position: absolute;
+  top: 110px;
+  right: 10px;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
+
+#md:hover #marker-div,
+#sh-d:hover #search-div,
+#sd-d:hover #saved-div {
+  visibility: visible;
+  opacity: 1.0;
+}
+
 #marker-div {
   padding: 10px;
   position: absolute;
-  display: none;
-  top: 10px;
-  right: 60px;
+  visibility: hidden;
+  opacity: 0;
+  top: 0px;
+  right: 45px;
   z-index: 100;
   min-height: 25vh;
   max-height: 80vh;
   width: 325px;
-  max-width: 100%;
   background: rgba(255,255,255,.65);
   border-radius: 2px;
   border: 1px solid transparent;
@@ -200,7 +237,7 @@ hr {
     left: 10px;
     background-color: white;
     opacity: 0.6;
-    z-index: 1000;
+    z-index: 10;
     border-radius: 2px;
     border: 1px solid transparent;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -219,6 +256,21 @@ hr {
   border:5px solid black;
   width: 100%;
   z-index: 100;
+  display: none;
+  margin: auto;
+  text-align: center;
+}
+
+#msg2 {
+  font-weight: 800;
+  font-family: Arial;
+  position: absolute;
+  top: 35%;
+  padding: 15px;
+  background-color: white;
+  border:5px solid black;
+  z-index: 100;
+  /*visibility: hidden;*/
   display: none;
   margin: auto;
   text-align: center;
