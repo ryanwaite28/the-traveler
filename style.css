@@ -1,0 +1,225 @@
+/* New Style */
+
+hr {
+  border-color: lightgrey;
+}
+
+#map-div {
+  width: 100%;
+  height: 100vh;
+}
+#pac-input {
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  height: 29px;
+  /* margin-left: 17px; */
+  margin-top: 10px;
+  outline: none;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+  z-index: 10;
+  position: absolute;
+  left: 114px;
+  top: 0px;
+}
+.infobox {
+  max-width: 200px;
+}
+
+#saved-icon {
+  position: absolute;
+  top: 110px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  opacity: 0.7;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#search-icon {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  background-color: white;
+  opacity: 0.7;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#marker-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  background-color: white;
+  opacity: 0.7;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#saved-icon:hover, #search-icon:hover, #marker-icon:hover {
+  opacity: 1.0;
+}
+
+#saved-div {
+  padding: 10px;
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 60px;
+  z-index: 100;
+  min-height: 25vh;
+  max-height: 80vh;
+  width: 325px;
+  max-width: 100%;
+  background: rgba(255,255,255,.65);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
+
+#search-div {
+  padding: 10px;
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 60px;
+  z-index: 100;
+  min-height: 25vh;
+  width: 325px;
+  max-width: 100%;
+  background: rgba(255,255,255,.65);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
+
+#marker-div {
+  padding: 10px;
+  position: absolute;
+  display: none;
+  top: 10px;
+  right: 60px;
+  z-index: 100;
+  min-height: 25vh;
+  max-height: 80vh;
+  width: 325px;
+  max-width: 100%;
+  background: rgba(255,255,255,.65);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
+
+#search-div:hover,
+#saved-div:hover,
+#marker-div:hover {
+  background: rgba(255,255,255,.95);
+}
+
+.search-list {
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  height: 45vh;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.search-list li {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: grey;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+  opacity: 0.9;
+}
+.search-list li:hover {
+  background-color: lightgrey;
+  opacity: 1.0;
+}
+.search-list li:hover hr {
+  border-color: grey;
+}
+
+#refresh {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    -webkit-transition: transition 0.3s;
+    transition: 0.3s;
+    top: 160px;
+    right: 10px;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 1000;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#refresh:hover {
+    opacity: 1.0;
+}
+
+#me-icon {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    -webkit-transition: transition 0.3s;
+    transition: 0.3s;
+    bottom: 30px;
+    left: 10px;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 1000;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#me-icon:hover {
+    opacity: 1.0;
+}
+
+#msg1 {
+  font-weight: 800;
+  font-family: Arial;
+  position: absolute;
+  bottom: 20%;
+  padding: 15px;
+  background-color: white;
+  border:5px solid black;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  margin: auto;
+  text-align: center;
+}

@@ -1,0 +1,71 @@
+/* New Mobile Style */
+
+@media only screen and (max-width: 475px) {
+
+	#saved-icon {
+	  top: 50px;
+		right: 10px;
+	}
+
+	#search-icon {
+	  top: 50px;
+		right: 60px;
+	}
+
+	#marker-icon {
+	  top: 50px;
+		right: 110px;
+	}
+
+	#refresh {
+		top: 50px;
+		left: 10px;
+	}
+
+	#pac-input {
+		width: 63%;
+	}
+
+	.icon1 {
+		height: 20px;
+	}
+
+	#search-div,
+	#saved-div,
+	#marker-div {
+		top: 100px;
+		right: 0px;
+		width: 100%;
+		margin: auto;
+		min-height: 5px;
+		height: 445px;
+	}
+
+	.search-list {
+		height: 38vh;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	#pac-input {
+		width: 58%;
+	}
+
+	#search-div,
+	#saved-div,
+	#marker-div {
+		top: 100px;
+		right: 0px;
+		width: 100%;
+		margin: auto;
+		min-height: 5px;
+		height: 345px;
+	}
+
+	.search-list {
+		height: 35vh;
+	}
+
+}

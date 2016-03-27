@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>The Traveler</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" type="text/css" href="http://ryanwaite28.github.io/my-cdn/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="http://ryanwaite28.github.io/my-cdn/css/emerald.css"/>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 475px)" href="mobile-style.css">
+		<link rel="icon" type="image/png" size="20x20" href="https://image.freepik.com/free-icon/airplane-around-earth_318-61627.png"/>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/angular.js"></script>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/jquery.js"></script>
+		<script src="http://ryanwaite28.github.io/my-cdn/js/emerald.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js"></script>
+		<script src="script.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSHPWjouiZzdAI_EhWkuuLsFMEGTgyYWE&libraries=places&callback=initMap" async defer></script>
+	</head>
+
+	<body ng-app="myApp" ng-controller="masterCtrl">
+
+		<h3 id="msg1"><b>Saved Location and Markers Loaded!</b></h3>
+
+		<a title="Click Me For A Brief Description" href="#">
+			<img id="me-icon" onclick="bioLog(this)" src="http://icons.iconarchive.com/icons/icons8/android/512/Users-User-icon.png"/>
+		</a>
+
+		<input style="left: 10px;" type="text" id="pac-input" placeholder="Enter a Location"/>
+		<a title="Click Icon To Zoom Out" href="#">
+			<img id="refresh" src="https://cdn3.iconfinder.com/data/icons/mobiactions/512/refresh_reload_arrow_sync-512.png">
+		</a>
+		<div id="map-div">
+
+		</div>
+
+		<a href="#"><img id="saved-icon" src="https://i.warosu.org/data/g/img/0449/16/1414539582291.png"/></a>
+		<div id="saved-div">
+			<h2 class="text-center"><b>Saved Places</b></h2>
+			<p class="text-center"><b>Places I've Been To!</b></p>
+			<hr>
+			<ul class="search-list">
+				<li ng-repeat="place in travels" ng-click="showMarkerTwo(this.place)">
+					<h3><b>{{place.name}}</b></h3>
+					<img class="icon1" src="{{place.icon}}"/>
+					<p>{{place.location}}</p>
+					<p><b>Date Explored:</b> <br>{{place.date}}</p>
+					<hr>
+					<p><b>Message:</b> <br>{{place.message}}</p>
+				</li>
+			</ul>
+		</div>
+
+		<a href="#"><img id="search-icon" src="https://image.freepik.com/free-icon/active-search-symbol_318-50386.png"/></a>
+		<div id="search-div">
+			<h2 class="text-center"><b>Search Places</b></h2>
+			<p class="text-center" id="message1"></p>
+			<input class="middlr" id="query" type="text" placeholder="Query"/><br>
+			<input class="middlr" id="city" type="text" placeholder="City, State"/><br>
+			<input class="middlr" id="submit-btn" type="button" value="Submit" ng-click="searchPlaces()"/>
+			<hr>
+			<ul class="search-list">
+				<li ng-repeat="place in places" ng-click="showMarker(this.place)">
+					<h3><b>{{place.name}}</b></h3>
+					<img class="icon1" src="{{place.icon}}"/>
+					<p>{{place.vicinity}}</p>
+					<input type="button" value="Add To Saved" ng-click="addPlace(place)"/>
+				</li>
+			</ul>
+		</div>
+
+		<a href="#"><img id="marker-icon" src="https://image.freepik.com/free-icon/map-marker_318-50706.png"/></a>
+		<div id="marker-div">
+			<h2 class="text-center"><b>Last Search Result<br>
+			From AutoComplete</b></h2>
+			<hr>
+			<b><h3 class="text-center" id="lo-name"></h3></b>
+			<img class="middlr" id="s-img" src=""/>
+			<p class="text-center" id="lo-address"></p>
+			<p class="text-center"><a id="lo-link" href="">Click For More Info</a></p>
+			<input class="middlr" type="button" id="add1-btn" value="Add To Saved" ng-click="addLocationOne()"/>
+			<br>
+		</div>
+
+	</body>
+
+</html>
