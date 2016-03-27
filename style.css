@@ -35,13 +35,29 @@ hr {
   top: 0px;
 }
 .infobox {
-  max-width: 200px;
+  max-width: 235px;
 }
 
 #saved-icon {
   /*position: absolute;
   top: 110px;
   right: 10px;*/
+  height: 40px;
+  width: 40px;
+  opacity: 0.7;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#fs-icon {
+  /*position: absolute;
+  top: 110px;
+  right: 10px;*/
+  padding: 5px;
+  background-color: white;
   height: 40px;
   width: 40px;
   opacity: 0.7;
@@ -126,6 +142,41 @@ hr {
   -webkit-transition: transition 0.3s;
   transition: 0.3s;
 }
+#fs-div {
+  padding: 10px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: -150px;
+  right: 45px;
+  z-index: 100;
+  min-height: 25vh;
+  width: 325px;
+  background: rgba(255,255,255,.65);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
+#marker-div {
+  padding: 10px;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 0px;
+  right: 45px;
+  z-index: 100;
+  min-height: 25vh;
+  max-height: 80vh;
+  width: 325px;
+  background: rgba(255,255,255,.65);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+}
 
 #md {
   position: absolute;
@@ -149,36 +200,26 @@ hr {
   -webkit-transition: transition 0.3s;
   transition: 0.3s;
 }
-
-#md:hover #marker-div,
-#sh-d:hover #search-div,
-#sd-d:hover #saved-div {
-  visibility: visible;
-  opacity: 1.0;
-}
-
-#marker-div {
-  padding: 10px;
+#fs-d {
   position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  top: 0px;
-  right: 45px;
-  z-index: 100;
-  min-height: 25vh;
-  max-height: 80vh;
-  width: 325px;
-  background: rgba(255,255,255,.65);
-  border-radius: 2px;
-  border: 1px solid transparent;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  top: 160px;
+  right: 10px;
   -webkit-transition: transition 0.3s;
   transition: 0.3s;
 }
 
+#md:hover #marker-div,
+#sh-d:hover #search-div,
+#sd-d:hover #saved-div,
+#fs-d:hover #fs-div {
+  visibility: visible;
+  opacity: 1.0;
+}
+
 #search-div:hover,
 #saved-div:hover,
-#marker-div:hover {
+#marker-div:hover,
+#fs-div:hover {
   background: rgba(255,255,255,.95);
 }
 
@@ -214,7 +255,7 @@ hr {
     position: absolute;
     -webkit-transition: transition 0.3s;
     transition: 0.3s;
-    top: 160px;
+    top: 210px;
     right: 10px;
     background-color: white;
     opacity: 0.6;
@@ -274,4 +315,8 @@ hr {
   display: none;
   margin: auto;
   text-align: center;
+}
+
+#place-filter {
+  width: 80%;
 }

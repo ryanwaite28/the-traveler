@@ -60,7 +60,7 @@
 		<div id="sh-d">
 			<a href="#"><img id="search-icon" src="https://image.freepik.com/free-icon/active-search-symbol_318-50386.png"/></a>
 		<div id="search-div">
-			<h2 class="text-center"><b>Search Places</b></h2>
+			<h2 class="text-center"><b>Search Google Places</b></h2>
 			<p class="text-center" id="message1"></p>
 			<input class="middlr" id="query" type="text" placeholder="Query"/><br>
 			<input class="middlr" id="city" type="text" placeholder="City, State"/><br>
@@ -91,6 +91,38 @@
 			<br>
 		</div>
 	</div>
+
+	<div id="fs-d">
+		<a href="#"><img id="fs-icon" src="https://image.freepik.com/free-icon/foursquare-logo_318-102663.jpg"/></a>
+	<div id="fs-div">
+		<h2 class="text-center"><b>Search FourSquare</b></h2>
+		<input class="middlr" type="text" id="query2" placeholder="Search Query"><br>
+		<input class="middlr" type="text" id="city2" placeholder="Search City"><br>
+		<input class="middlr" id="submit-btn" type="button" value="Submit" ng-click="loadPlaces()"><br>
+		<input class="middlr" id="place-filter" ng-keyup="filterResults()" ng-model="filter" placeholder="Filter Results by Place Name"/>
+		<hr>
+		<ul class="search-list">
+			<li title="Click Any List Item To Show Its Marker On the Map" class="fq-items" ng-repeat="fsplace in fsplaces | filter: {placeName:filter}" ng-click="FQshowMarker(this)">
+				<div>
+					<b><h4>{{fsplace.placeName}}</h4></b>
+					<img src="{{fsplace.placeIcon}}"/>
+					<p>
+						<span>{{fsplace.placeAddress}}</span>
+						<br>
+						<span>{{fsplace.placeCity}}</span>, <span>{{fsplace.placeState}}</span>, <span>{{fsplace.placeZip}}</span>
+						<br>
+						<span>{{fsplace.placeCountry}}</span>
+						<p><span>Phone: {{fsplace.placePhone}}</span></p>
+						<span>Status: {{fsplace.placeStatus}}</span>, <span>Specials: {{fsplace.placeSpecials}}</span>
+						<input type="button" value="Add To Saved" ng-click="FQaddPlace(fsplace)"/>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
 
 	</body>
 
