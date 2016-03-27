@@ -24,6 +24,7 @@
 	<body ng-app="myApp" ng-controller="masterCtrl">
 
 		<h3 id="msg1"><b>Saved Location and Markers Loaded!</b></h3>
+		<h3 id="msg2"><b></b></h3>
 
 		<a title="Click Me For A Brief Description" href="#">
 			<img id="me-icon" onclick="bioLog(this)" src="http://icons.iconarchive.com/icons/icons8/android/512/Users-User-icon.png"/>
@@ -37,6 +38,7 @@
 
 		</div>
 
+		<div id="sd-d">
 		<a href="#"><img id="saved-icon" src="https://i.warosu.org/data/g/img/0449/16/1414539582291.png"/></a>
 		<div id="saved-div">
 			<h2 class="text-center"><b>Saved Places</b></h2>
@@ -53,8 +55,10 @@
 				</li>
 			</ul>
 		</div>
+	</div>
 
-		<a href="#"><img id="search-icon" src="https://image.freepik.com/free-icon/active-search-symbol_318-50386.png"/></a>
+		<div id="sh-d">
+			<a href="#"><img id="search-icon" src="https://image.freepik.com/free-icon/active-search-symbol_318-50386.png"/></a>
 		<div id="search-div">
 			<h2 class="text-center"><b>Search Places</b></h2>
 			<p class="text-center" id="message1"></p>
@@ -71,8 +75,10 @@
 				</li>
 			</ul>
 		</div>
+	</div>
 
-		<a href="#"><img id="marker-icon" src="https://image.freepik.com/free-icon/map-marker_318-50706.png"/></a>
+		<div id="md">
+			<a href="#"><img id="marker-icon" src="https://image.freepik.com/free-icon/map-marker_318-50706.png"/></a>
 		<div id="marker-div">
 			<h2 class="text-center"><b>Last Search Result<br>
 			From AutoComplete</b></h2>
@@ -84,6 +90,7 @@
 			<input class="middlr" type="button" id="add1-btn" value="Add To Saved" ng-click="addLocationOne()"/>
 			<br>
 		</div>
+	</div>
 
 	</body>
 

@@ -100,21 +100,21 @@ function gool(str) {
 // Button Functions
 $(document).ready(function(){
 
-	var searchIcon = $('#search-icon');
-	var savedIcon = $('#saved-icon');
-	var markerIcon = $('#marker-icon');
+	//var searchIcon = $('#search-icon');
+	//var savedIcon = $('#saved-icon');
+	//var markerIcon = $('#marker-icon');
 
 	var refreshIcon = $('#refresh');
 
-	var searchDiv = $('#search-div');
-	var savedDiv = $('#saved-div');
-	var markerDiv = $('#marker-div');
+	//var searchDiv = $('#search-div');
+	//var savedDiv = $('#saved-div');
+	//var markerDiv = $('#marker-div');
 
-	var sh = true;
-	var sd= true;
-	var mk = true;
+	//var sh = true;
+	//var sd= true;
+	//var mk = true;
 
-	searchIcon.click(function(){
+	/*searchIcon.click(function(){
 
 		if(sh == true) {
 			savedDiv.hide('fast');
@@ -175,9 +175,17 @@ $(document).ready(function(){
 			sd = true;
 		}
 
-	});
+	});*/
 
 	refreshIcon.click(function(){
+
+		if( $('#saved-div').css('visibility') == 'visible' ||
+				$('#search-div').css('visibility') == 'visible' ||
+				$('#marker-div').css('visibility') == 'visible') {
+			console.log("Just Refreshed.");
+			return
+		}
+
 		map.setZoom(4);
 	});
 
@@ -209,7 +217,7 @@ function($scope, travelr) {
 	},3000);
 
 	$scope.loadSaved = function(){
-		//console.log("Then");
+
 		if($scope.travels.length == 0) {
 			return;
 		}
@@ -584,13 +592,29 @@ function($scope, travelr) {
 }
 ]);
 
-function bioLog(str) {
-	//console.log(str);
+function bioLog() {
 
-	alert("Welcome Traveler! This is a Website/Web Application that represents everywhere i've been in the world! \
+	$('#msg2').text("Welcome Traveler! This is a Website/Web Application that represents everywhere i've been in the world! \
 	Click the marker icon to show the results from the autocomplete input. \
 	Click the search icon to do a search. \
 	The memory disk icon shows everywhere i've been to! The refresh icon is just to zoom out. \
 	Click the add button from the results to store locations in the memory. \
 	Take Care Traveler! Happy Journeys and Remember Your Travels!");
 }
+
+bioLog();
+
+$(document).ready(function(){
+
+	$('#me-icon').click(function(){
+
+		if( $('#msg2').css('display') == 'none' ) {
+			$('#msg2').show('fast');
+		}
+		else {
+			$('#msg2').hide('fast');
+		}
+
+	});
+
+});
