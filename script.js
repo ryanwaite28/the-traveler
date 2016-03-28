@@ -235,8 +235,10 @@ function($scope, travelr) {
 
 					var infoBox = '<div class="infobox">' + '<center>' +
 					'<h3>' + item.name + '</h3>' +
-					'<img src="' + item.icon + '"/>' + '<br>' +
-					'<p>' + item.location + '</p>' +
+					'<img src="' + item.icon + '"/>' + '<br><br>' +
+					'<p><b>Location:</b><br>' + item.location + '</p>' + '<br>' +
+					'<p><b>Date:</b><br>' + item.date + '</p>' +
+					'<p><b>Message:</b><br>' + item.message + '</p>' +
 					'</center>' + '<div>';
 
 					var marker = new google.maps.Marker({
