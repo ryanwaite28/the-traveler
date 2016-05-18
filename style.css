@@ -259,7 +259,7 @@ hr {
     right: 10px;
     background-color: white;
     opacity: 0.6;
-    z-index: 1000;
+    z-index: 100;
     border-radius: 2px;
     border: 1px solid transparent;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -284,6 +284,25 @@ hr {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 #me-icon:hover {
+    opacity: 1.0;
+}
+
+#menu-icon {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    -webkit-transition: transition 0.3s;
+    transition: 0.3s;
+    bottom: 80px;
+    left: 10px;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 10;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+#menu-icon:hover {
     opacity: 1.0;
 }
 
@@ -319,4 +338,58 @@ hr {
 
 #place-filter {
   width: 80%;
+}
+ /* --- */
+
+#side-bar {
+  height: 100vh;
+  width: 415px;
+  max-width: 100%;
+  overflow-y: scroll;
+  position: absolute;
+  top: 0px;
+  left: -500px;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid transparent;
+}
+
+#side-bar::-webkit-scrollbar {
+  display: none;
+}
+
+#sb-inner {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+}
+
+#close-icon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  -webkit-transition: transition 0.3s;
+  transition: 0.3s;
+  top: 10px;
+  right: 0px;
+  background-color: white;
+  opacity: 0.6;
+  z-index: 10;
+  border-radius: 2px;
+  border: 1px solid transparent;
+}
+#close-icon:hover {
+  opacity: 1.0;
+}
+
+#sb-ht {
+  margin: 0px;
+  height: 60px;
+  line-height: 60px;
+  vertical-align: middle;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-weight: bold;
 }
