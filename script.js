@@ -100,82 +100,28 @@ function gool(str) {
 // Button Functions
 $(document).ready(function(){
 
-	//var searchIcon = $('#search-icon');
-	//var savedIcon = $('#saved-icon');
-	//var markerIcon = $('#marker-icon');
+	var menuIcon = $('#menu-icon');
+	var closeIcon = $('#close-icon');
+	var sideBar = $('#side-bar');
+	var sbh = true;
+
+	menuIcon.click(function(){
+
+		sideBar.animate({
+			left: '0px'
+		})
+
+	});
+
+	closeIcon.click(function(){
+
+		sideBar.animate({
+			left: '-500px'
+		})
+
+	});
 
 	var refreshIcon = $('#refresh');
-
-	//var searchDiv = $('#search-div');
-	//var savedDiv = $('#saved-div');
-	//var markerDiv = $('#marker-div');
-
-	//var sh = true;
-	//var sd= true;
-	//var mk = true;
-
-	/*searchIcon.click(function(){
-
-		if(sh == true) {
-			savedDiv.hide('fast');
-			markerDiv.hide('fast');
-			searchDiv.show('fast');
-			sh = false;
-			sd = true;
-			mk = true;
-		}
-		else {
-			savedDiv.hide('fast');
-			searchDiv.hide('fast');
-			markerDiv.hide('fast');
-			sh = true;
-			sd = true;
-			mk = true;
-		}
-
-	});
-
-	savedIcon.click(function(){
-
-		if(sd == true) {
-			searchDiv.hide('fast');
-			markerDiv.hide('fast');
-			savedDiv.show('fast');
-			sh = true;
-			mk = true;
-			sd = false;
-		}
-		else {
-			savedDiv.hide('fast');
-			searchDiv.hide('fast');
-			markerDiv.hide('fast');
-			sh = true;
-			mk = true;
-			sd = true;
-		}
-
-	});
-
-	markerIcon.click(function(){
-
-		if(mk == true) {
-			searchDiv.hide('fast');
-			savedDiv.hide('fast');
-			markerDiv.show('fast');
-			mk = false;
-			sh = true;
-			sd = true;
-		}
-		else {
-			savedDiv.hide('fast');
-			searchDiv.hide('fast');
-			markerDiv.hide('fast');
-			sh = true;
-			mk = true;
-			sd = true;
-		}
-
-	});*/
 
 	refreshIcon.click(function(){
 
@@ -187,6 +133,23 @@ $(document).ready(function(){
 		}
 
 		map.setZoom(4);
+	});
+
+	$(document).keyup(function(e){
+
+		// console.log(e.keyCode);
+
+		if( e.keyCode == 37 ) {
+			sideBar.animate({
+				left: '-500px'
+			})
+		}
+		if( e.keyCode == 39 ) {
+			sideBar.animate({
+				left: '0px'
+			})
+		}
+
 	});
 
 });
