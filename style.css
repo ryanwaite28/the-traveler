@@ -360,23 +360,22 @@ hr {
 }
 
 #sb-inner {
-  height: 100%;
+  min-height: 200vh;
   width: 100%;
   position: relative;
-
 }
 
 #close-icon {
   height: 40px;
   width: 40px;
-  position: absolute;
+  position: fixed;
   -webkit-transition: transition 0.3s;
   transition: 0.3s;
   top: 10px;
-  right: 0px;
+  left: 0px;
   background-color: white;
   opacity: 0.6;
-  z-index: 10;
+  z-index: 10000;
   border-radius: 2px;
   border: 1px solid transparent;
 }
@@ -392,4 +391,10 @@ hr {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
   font-weight: bold;
+  position: fixed;
+  width: 415px;
+  max-width: 100%;
+  z-index: 1000;
+  background-color: white;
+  margin-bottom: 60px;
 }
