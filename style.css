@@ -263,7 +263,7 @@ hr {
     position: absolute;
     -webkit-transition: transition 0.3s;
     transition: 0.3s;
-    top: 210px;
+    top: 260px;
     right: 10px;
     background-color: white;
     opacity: 0.6;
@@ -282,8 +282,8 @@ hr {
     position: absolute;
     -webkit-transition: transition 0.3s;
     transition: 0.3s;
-    bottom: 30px;
-    left: 10px;
+    top: 360px;
+	right: 10px;
     background-color: white;
     opacity: 0.6;
     z-index: 100000;
@@ -301,8 +301,8 @@ hr {
     position: absolute;
     -webkit-transition: transition 0.3s;
     transition: 0.3s;
-    bottom: 80px;
-    left: 10px;
+    top: 410px;
+	right: 10px;
     background-color: white;
     opacity: 0.6;
     z-index: 100000;
@@ -333,7 +333,7 @@ hr {
   font-weight: 800;
   font-family: Arial;
   position: absolute;
-  top: 35%;
+  bottom: 50px;
   padding: 15px;
   background-color: white;
   border:5px solid black;
@@ -356,7 +356,7 @@ hr {
   overflow-y: scroll;
   position: fixed;
   top: 0px;
-  left: -500px;
+  right: -500px;
   z-index: 100000;
   background-color: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
@@ -373,17 +373,26 @@ hr {
   position: relative;
 }
 
+#ktr {
+	margin: 0px;
+	height: 60px;
+	position: fixed;
+  width: 415px;
+  max-width: 100%;
+  z-index: 1000;
+}
+
 #close-icon {
   height: 40px;
   width: 40px;
-  position: fixed;
+  float: left;
   -webkit-transition: transition 0.3s;
   transition: 0.3s;
-  top: 10px;
-  left: 0px;
+  margin-top: 10px;
+  right: 0px;
   background-color: white;
   opacity: 0.6;
-  z-index: 10000;
+  z-index: -10;
   border-radius: 2px;
   border: 1px solid transparent;
 }
@@ -399,7 +408,7 @@ hr {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   text-align: center;
   font-weight: bold;
-  position: fixed;
+  /*position: fixed;*/
   width: 415px;
   max-width: 100%;
   z-index: 1000;

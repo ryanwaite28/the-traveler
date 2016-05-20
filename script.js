@@ -108,16 +108,18 @@ $(document).ready(function(){
 	menuIcon.click(function(){
 
 		sideBar.animate({
-			left: '0px'
+			right: '0px'
 		})
+		$('#close-icon').css('z-index', '10000');
 
 	});
 
 	closeIcon.click(function(){
 
 		sideBar.animate({
-			left: '-500px'
+			right: '-500px'
 		})
+		$('#close-icon').css('z-index', '-10');
 
 	});
 
@@ -139,15 +141,17 @@ $(document).ready(function(){
 
 		// console.log(e.keyCode);
 
-		if( e.keyCode == 37 ) {
-			sideBar.animate({
-				left: '-500px'
-			})
-		}
 		if( e.keyCode == 39 ) {
 			sideBar.animate({
-				left: '0px'
+				right: '-500px'
 			})
+			$('#close-icon').css('z-index', '-10');
+		}
+		if( e.keyCode == 37 ) {
+			sideBar.animate({
+				right: '0px'
+			})
+			$('#close-icon').css('z-index', '10000');
 		}
 
 	});
@@ -888,7 +892,8 @@ function bioLog() {
 	Click the search icon to do a search. \
 	The memory disk icon shows everywhere i've been to! The refresh icon is just to zoom out. \
 	Click the add button from the results to store locations in the memory. \
-	Take Care Traveler! Happy Journeys and Remember Your Travels!");
+	Take Care Traveler! Happy Journeys and Remember Your Travels! \
+	Click Me To Close This Message Box.");
 }
 
 bioLog();
@@ -905,5 +910,9 @@ $(document).ready(function(){
 		}
 
 	});
+	
+	$('#msg2').click(function(){
+		$('#msg2').hide('fast');
+	})
 
 });
