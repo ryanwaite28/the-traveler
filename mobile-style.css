@@ -63,6 +63,15 @@
 		margin: auto;
 		min-height: 5px;
 	}
+	
+	#me-icon {
+		top: 100px;
+		right: 10px;
+	}
+	#menu-icon {
+		top: 100px;
+		right: 60px;
+	}
 
 
 	.search-list {
